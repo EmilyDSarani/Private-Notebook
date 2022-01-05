@@ -17,8 +17,10 @@ export default function Auth({ isSigningUp = false }) {
       // If signing in: set the user ({id, email}) and redirect to /notes
       // If signing up: redirect to /confirm-email
       // Use the corresponding functions from `/services/users` for both cases
-
       
+      //Thought Process
+      
+
 
 
     } catch (error) {
