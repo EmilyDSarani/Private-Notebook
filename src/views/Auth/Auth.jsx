@@ -20,11 +20,11 @@ export default function Auth({ isSigningUp = false }) {
       // Use the corresponding functions from `/services/users` for both cases
 
       if(isSigningUp){
-        const user = await signInUser(email,password);
+        const user = await signUpUser(email,password);
         setUser(user);
         history.replace('/confirm-email');
       } else {
-        const user = await signUpUser(email, password)
+        const user = await signInUser(email, password)
         setUser(user);
         history.replace('/notes');
       }
