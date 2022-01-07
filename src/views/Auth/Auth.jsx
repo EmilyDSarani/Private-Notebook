@@ -9,7 +9,7 @@ import styles from './Auth.css';
 export default function Auth({ isSigningUp = false }) {
   const history = useHistory();
   const { setUser } = useUser();
-  const { from } = location.state || {from: '/notes'};
+  // const { from } = location.state || {from: '/notes'};
 
   const handleSubmit = async (email, password) => {
     try {
@@ -28,16 +28,10 @@ export default function Auth({ isSigningUp = false }) {
         setUser(user);
         history.replace('/notes');
       }
-
-
-
-
-
-
-      !isSigningUp ? await signInUser({id, email}) :
-      await signUpUser({email, password}) 
+      // !isSigningUp ? await signInUser({id, email}) :
+      // await signUpUser({email, password}) 
       
-      history.replace(from)
+      // history.replace(from)
     } catch (error) {
       throw error;
     }
